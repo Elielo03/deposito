@@ -37,6 +37,10 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/api1', 'Home::index');
 $routes->get('api', 'Cliente::getAll');
+
+$routes->get('/api/products', 'ProductController::getAll');
+
+
 // $routes->resource('clientes');
 // $routes->get('api/clientes', 'Api\Controllers::getAll');
 
