@@ -4,7 +4,7 @@ namespace App\Controllers;
 use App\Models\ProductsModel;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
-defined('BASEPATH') OR exit('No direct script access allowed');
+
 
 
 
