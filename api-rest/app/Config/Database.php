@@ -32,11 +32,11 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => '',
-        'password' => '',
-        'database' => '',
-        'DBDriver' => 'MySQLi',
+        'hostname'    => 'depositodieguin.com',
+        'username'    => 'u273874429_admin',
+        'password'    => 'Elielo-03',
+        'database'    => 'u273874429_ventas',
+        'DBDriver'    => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
         'DBDebug'  => (ENVIRONMENT !== 'production'),

@@ -8,6 +8,7 @@ class Cliente extends ResourceController{
     use ResponseTrait;
 
     public function getAll(){
+        echo "H3";
         $model=new ClienteModel();
         $data['clientes'] = $model->orderBy('id', 'DESC')->findAll();
         return $this->respond($data);

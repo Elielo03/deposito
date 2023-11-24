@@ -39,6 +39,12 @@ $routes->get('/api1', 'Home::index');
 $routes->get('api', 'Cliente::getAll');
 
 $routes->get('/api/products', 'ProductController::getAll');
+$routes->post('/api/product', 'ProductController::addProduct');
+$routes->put('/api/product', 'ProductController::updateProduct');
+$routes->delete('/api/product/(:num)', 'ProductController::deleteProduct/$1');
+$routes->get('/api/product/(:num)', 'ProductController::getById/$1');
+
+
 
 
 // $routes->resource('clientes');
