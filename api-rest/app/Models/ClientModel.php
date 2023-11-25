@@ -3,8 +3,8 @@
 namespace App\Models;
 use CodeIgniter\Model;
 
-class ClienteModel extends Model{
+class ClientModel extends Model{
     protected $table = 'clientes';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['razon_social', 'cordenadas'.'referencia', 'codigo_qr'];
+    protected $allowedFields = ['razon_social', 'coordenadas','referencia', 'codigo_qr'];
 } 
