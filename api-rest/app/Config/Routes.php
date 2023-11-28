@@ -36,7 +36,7 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/api1', 'Home::index');
-$routes->get('api', 'Cliente::getAll');
+
 $routes->get('/api/clients', 'ClientController::getAll');
 $routes->post('/api/client', 'ClientController::addClient');
 $routes->put('/api/client', 'ClientController::updateClient');
@@ -49,11 +49,18 @@ $routes->put('/api/product', 'ProductController::updateProduct');
 $routes->delete('/api/product/(:num)', 'ProductController::deleteProduct/$1');
 $routes->get('/api/product/(:num)', 'ProductController::getById/$1');
 
+$routes->get('/api/visits', 'VisitController::getAll');
+$routes->post('/api/visit', 'VisitController::addVisit');
+$routes->put('/api/visit', 'VisitController::updateVisit');
+$routes->delete('/api/visit/(:num)', 'VisitController::deleteVisit/$1');
+$routes->get('/api/visit/(:num)', 'VisitController::getById/$1');
 
+$routes->get('/api/sales', 'SaleController::getAll');
+$routes->post('/api/sale', 'SaleController::addSale');
+$routes->put('/api/sale', 'SaleController::updateSale');
+$routes->delete('/api/sale/(:num)', 'SaleController::deleteSale/$1');
+$routes->get('/api/sale/(:num)', 'SaleController::getById/$1');
 
-
-// $routes->resource('clientes');
-// $routes->get('api/clientes', 'Api\Controllers::getAll');
 
 /*
  * --------------------------------------------------------------------
