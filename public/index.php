@@ -29,25 +29,24 @@ if (getcwd() . DIRECTORY_SEPARATOR !== FCPATH) {
  * and fires up an environment-specific bootstrapping.
  */
 
-//  echo "Hiii". FCPATH . DIRECTORY_SEPARATOR .'';
-// // Load our paths config file
-// // This is the line that might need to be changed, depending on your folder structure.
-// require FCPATH . '../app/Config/Paths.php';
+// Load our paths config file
+// This is the line that might need to be changed, depending on your folder structure.
+require FCPATH . '../app/Config/Paths.php';
 // ^^^ Change this line if you move your application folder
 
 $paths = new Config\Paths();
 
 // Location of the framework bootstrap file.
-// require rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.php';
+require rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.php';
 
-// // Load environment settings from .env files into $_SERVER and $_ENV
-// require_once SYSTEMPATH . 'Config/DotEnv.php';
-// (new CodeIgniter\Config\DotEnv(ROOTPATH))->load();
+// Load environment settings from .env files into $_SERVER and $_ENV
+require_once SYSTEMPATH . 'Config/DotEnv.php';
+(new CodeIgniter\Config\DotEnv(ROOTPATH))->load();
 
-// // Define ENVIRONMENT
-// if (! defined('ENVIRONMENT')) {
-//     define('ENVIRONMENT', env('CI_ENVIRONMENT', 'production'));
-// }
+// Define ENVIRONMENT
+if (! defined('ENVIRONMENT')) {
+    define('ENVIRONMENT', env('CI_ENVIRONMENT', 'production'));
+}
 
 // Load Config Cache
 // $factoriesCache = new \CodeIgniter\Cache\FactoriesCache();
