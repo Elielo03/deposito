@@ -29,10 +29,10 @@ if (getcwd() . DIRECTORY_SEPARATOR !== FCPATH) {
  * and fires up an environment-specific bootstrapping.
  */
 
- echo "Hiii". FCPATH . DIRECTORY_SEPARATOR .'';
+ echo "Hiii". FCPATH ;
 // Load our paths config file
 // This is the line that might need to be changed, depending on your folder structure.
-require FCPATH . '../app/Config/Paths.php';
+require FCPATH . '/home/u273874429/domains/depositodieguin.com/public_html/app/Config/Paths.php';
 // ^^^ Change this line if you move your application folder
 
 $paths = new Config\Paths();
