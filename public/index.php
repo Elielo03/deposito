@@ -40,8 +40,8 @@ $paths = new Config\Paths();
 // require rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.php';
 
 // Load environment settings from .env files into $_SERVER and $_ENV
-require_once SYSTEMPATH . 'Config/DotEnv.php';
-(new CodeIgniter\Config\DotEnv(ROOTPATH))->load();
+// require_once SYSTEMPATH . 'Config/DotEnv.php';
+// (new CodeIgniter\Config\DotEnv(ROOTPATH))->load();
 
 // Define ENVIRONMENT
 if (! defined('ENVIRONMENT')) {
